@@ -1,0 +1,46 @@
+<div id="cadastro">
+  <br>
+   <h1 id="titulo">Funcionários</h1>
+  </div>
+
+<div class="container">
+  <!-- Large outline input -->
+<div class="md-form md-outline form-lg">
+  <label for="form-lg">Nome</label>
+  <input id="form-lg" class="form-control form-control-lg" type="text" name="nome"
+  [(ngModel)]="funcionario.nome" #nome="ngModel" mdbInput>
+</div>
+
+<div class="md-form md-outline form-lg">
+  <label for="form-lg">CPF</label>
+  <input id="form-lg" class="form-control form-control-lg" type="text" name="cpf"
+  [(ngModel)]="funcionario.cpf" #nome="ngModel" mdbInput>
+</div>
+
+<div class="p-col-12 p-md-3 p-fluid">
+  <label>Salario</label>
+  <input pInputText type="text" name="salario" placeholder="0,00"
+    currencyMask [options]="{ prefix: '', thousands: '.', decimal: ',', allowNegative: false }"
+    [(ngModel)]="funcionario.salario"
+    required>
+</div>
+  <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">Status</label>
+      </div>
+      <select class="custom-select" [(ngModel)]="funcionario.status" id="inputGroupSelect01">
+        <option selected>Selecione...</option>
+        <option value="ATIVO">ATIVO</option>
+        <option value="DESATIVO">DESATIVO</option>
+      </select>
+  </div><br>
+
+
+
+</div>
+<br><br>
+<button align-items= "center" (click)="salvar()" type="submit" class="btn btn-outline-secondary">Salvar Funcionário</button><br>
+<button routerLink="/gfuncionario" type="submit" class="btn btn-outline-secondary">Gerenciar Funcionários</button>
+
+</form>
+</div>

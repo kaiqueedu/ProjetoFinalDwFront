@@ -1,0 +1,20 @@
+<div id="cadastro">
+  <br>
+   <h1 id="titulo">Grupo</h1>
+  </div>
+
+<div class="container">
+  <!-- Large outline input -->
+<div class="md-form md-outline form-lg">
+  <label for="form-lg">Nome</label>
+  <input id="form-lg" class="form-control form-control-lg" type="text" name="nome"
+  [(ngModel)]="grupo.nome" #nome="ngModel" mdbInput>
+</div>
+
+</div>
+<br><br>
+<button align-items= "center" (click)="salvar()" type="submit" class="btn btn-outline-secondary">Salvar Funcionário</button><br>
+<button routerLink="/gfuncionario" type="submit" class="btn btn-outline-secondary">Gerenciar Funcionários</button>
+
+</form>
+</div>
